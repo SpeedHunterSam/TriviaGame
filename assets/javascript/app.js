@@ -1,14 +1,14 @@
 
 
 let timer = 5; // set timer to 5 seconds
-let timerRunning = true;
-let answer1 = "";
+let timerRunning = true; ///checks and balances variable to track if functions have terminated
+let answer1 = ""; // variable to save the shotgun/quick answer
 
 
 
 function startGame() {
 
-    document.getElementById("revealQuestion").style.color = "black";
+    document.getElementById("revealQuestion").style.color = "black";  //reveal the question to the user immediately after clicking the start button
 
 
     document.getElementById("gameContainer").innerHTML = timer + " Seconds left"; //display starting timer
@@ -36,7 +36,7 @@ function startGame() {
 
         console.log(answer1); //double checking the console for the correct string aka answer
 
-        if(answer1 === "Black Panther"){
+        if(answer1 === "Black Panther"){  //checking to see if the answer received was correct
         
             document.getElementById("gameContainer").innerHTML = "Game Over... Congratulations " + answer1 + " is correct.  Thanos has spared you.";
         } else{
@@ -54,7 +54,7 @@ function startGame() {
         if (timer <= 0) {
             timerRunning = false;
             console.log(timerRunning);  //a check to make sure everything stops
-            gameOver();
+            gameOver();  //run end of game function and display result
         } else {
             timer--;
         }
