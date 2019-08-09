@@ -1,10 +1,15 @@
 
 
-let timer = 2; // set timer to 59 seconds
+let timer = 5; // set timer to 5 seconds
 let timerRunning = true;
+let answer1 = "";
+
 
 
 function startGame() {
+
+    document.getElementById("revealQuestion").style.color = "black";
+
 
     document.getElementById("gameContainer").innerHTML = timer + " Seconds left"; //display starting timer
 
@@ -18,7 +23,25 @@ function startGame() {
         console.log(timerRunning) //a double check to make sure everything stops
         console.log("Game has Stopped")
         clearInterval(fullStop);
-        document.getElementById("gameContainer").innerHTML = "Game Over";
+
+        //getting the values of all of the radio buttons
+
+        let ele = document.getElementsByName("question1"); 
+        for(let i = 0; i < ele.length; i++) { 
+            if(ele[i].checked){
+                answer1 = ele[i].value;
+            }
+        } 
+
+
+        console.log(answer1); //double checking the console for the correct string aka answer
+
+        if(answer1 === "Black Panther"){
+        
+            document.getElementById("gameContainer").innerHTML = "Game Over... Congratulations " + answer1 + " is correct.  Thanos has spared you.";
+        } else{
+            document.getElementById("gameContainer").innerHTML = "Game Over..." + answer1 + " is not correct.  You have been sacrificed by Thanos for the greater good.";
+        }
 
 
     }
@@ -36,6 +59,8 @@ function startGame() {
             timer--;
         }
     }
+
+    
 
 }
 

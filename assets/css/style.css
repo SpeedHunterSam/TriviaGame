@@ -3,10 +3,6 @@ body{
     text-align: center;
 }
 
-.gameContainer{
-    background: aqua;
-
-}
 
 #gameContainer {
     font-family: monospace;
@@ -19,3 +15,9 @@ body{
     /* Visual */
     background: white;
   }
+
+p.revealQuestion{
+color: white;
+font-size: 30px;
+
+}

@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
-    <title>Comic Book Heros Trivia Game</title>
+    <title>One Chance Book Heroes Trivia Game</title>
 </head>
 
 <body>
     <div class="container">
         <div class="row-lg-12">
-            <h1>Comic Book Trivia</h1>
+            <h1>One Chance Comic Book Heroes Trivia Game</h1>
         </div>
         <div class="col-lg-12" id="gameContainer">
             <h3>Lets test your comic book hero knowledge!</h3>
@@ -23,20 +23,20 @@
         </div>
         <div class="col-lg-12" id="questions">
 
-            <p>Which of these superheroes was created by Marvel?</p>
+            <p id="revealQuestion" class="revealQuestion">Which of these superheroes was created by Marvel?</p>
 
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
                 <label class="btn btn-secondary active">
-                    <input type="radio" name="question1" id="option1" autocomplete="off" checked> Superman
+                    <input type="radio" name="question1" id="option1" autocomplete="off" value="Superman" checked> Superman
                 </label>
                 <label class="btn btn-secondary">
-                    <input type="radio" name="question1" id="option2" autocomplete="off"> The Flash
+                    <input type="radio" name="question1" id="option2" autocomplete="off" value="The Flash"> The Flash
                 </label>
                 <label class="btn btn-secondary">
-                    <input type="radio" name="question1" id="option3" autocomplete="off"> Wonder Woman
+                    <input type="radio" name="question1" id="option3" autocomplete="off" value="Wonder Woman"> Wonder Woman
                 </label>
                 <label class="btn btn-secondary">
-                    <input type="radio" name="question1" id="option3" autocomplete="off"> Black Panther
+                    <input type="radio" name="question1" id="option4" autocomplete="off" value="Black Panther"> Black Panther
                 </label>
             </div>
 
